@@ -4,16 +4,9 @@ See <https://github.com/interconnectit/Search-Replace-DB>
 
 ---
 
-An example of how to add the interconnectit Search-Replace-DB utility to a Docker Compose project.
+Example of using interconnectit Search-Replace-DB utility to a Docker Compose project.
 
-Run Search-Replace-DB in a browser
-
-```shell
-http://localhost:<port for sr service>
-```
-
-Run Search-Replace-DB from the command line
-
-```shell
-docker compose exec sr php srdb.cli.php --help
-```
+1. Download / extract the Search-Replace-DB project.
+1. Add the `sr` service in `compose.yaml` to your Compose project.
+1. Run Search-Replace-DB in a browser: `http://localhost:<port for sr service>`
+1. Run Search-Replace-DB from the command line `docker compose exec sr php srdb.cli.php --help`
