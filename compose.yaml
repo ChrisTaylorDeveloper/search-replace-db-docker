@@ -1,0 +1,20 @@
+services:
+  sr:
+    image: php:8.3.30-apache
+    ports:
+      - ${SR_PORT_HOST}:80
+    volumes:
+      - ./Search-Replace-DB-4.1.4:/var/www/html
+
+  db:
+    image: mariadb:10.4
+    environment:
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASS}
+      - MARIADB_USER=${DB_USER}
+      - MARIADB_PASSWORD=${DB_PASS}
+      - MARIADB_DATABASE=${DB_DATABASE}
+
+  adminer:
+    image: adminer
+    ports:
+      - ${ADMINER_PORT_HOST}:8080
